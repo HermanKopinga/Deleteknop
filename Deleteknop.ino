@@ -38,8 +38,8 @@ void loop() {
     actionRequired = true;
   }
   
-  // if the button currently pressed and there hasn't been a change in 40 milliseconds.
-  if (buttonState == LOW && actionRequired && (millis() - lastChange) > 40) {
+  // if the button currently pressed and there hasn't been a change in 10 milliseconds.
+  if (buttonState == LOW && actionRequired && (millis() - lastChange) > 10) {
     // Keyboard.press(KEY_LEFT_GUI);   // optional: Windows or Command key
     // Keyboard.press(KEY_LEFT_SHIFT); // optional: Any shift key
     Keyboard.press(KEY_DELETE);        // press the key
